@@ -24,7 +24,7 @@ namespace VoiceActing.Patches
         {
             if (Plugin.areQuestVoicesOn == true)
             {
-                Plugin.Log.LogWarning("Searching for id " + quest.Id);
+                Plugin.Log.LogInfo("Searching for id " + quest.Id);
                 bool canRun = VoiceActingManager.EnsureConnections(out canRun);
                 if (canRun) VoiceActingManager.RunVoiceActingCode(quest);
             }

@@ -24,7 +24,7 @@ namespace VoiceActing.Patches
         {
             if (Plugin.areTransactionsVoicesOn == true)
             {
-                Plugin.Log.LogWarning("Trader deal was made. Type of deal is currently unknown, will be added later. Assuming Buy for now. Trader Id is currently unknown, will be added later. Assuming Prapor for now.");
+                Plugin.Log.LogInfo("Trader deal was made, playing a transaction sound,");
                 bool canRun = VoiceActingManager.EnsureConnections(out canRun);
                 if (canRun)
                 {

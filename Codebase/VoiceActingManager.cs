@@ -128,7 +128,7 @@ namespace VoiceActing.Codebase
                 return;
             }
 
-            Log.LogWarning($"[VoiceActingMod] Attempting to load and queue audio for quest {quest.Id}, file: {filePath}");
+            Log.LogInfo($"[VoiceActingMod] Attempting to load and queue audio for quest {quest.Id}, file: {filePath}");
 
             using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + filePath, AudioType.WAV))
             {
@@ -205,7 +205,7 @@ namespace VoiceActing.Codebase
 
             // Pick a random file
             string filePath = matchingFiles[UnityEngine.Random.Range(0, matchingFiles.Length)];
-            Log.LogWarning($"[VoiceActingMod] Attempting to play {suffix} for trader {traderId}: {Path.GetFileName(filePath)}");
+            Log.LogInfo($"[VoiceActingMod] Attempting to play {suffix} for trader {traderId}: {Path.GetFileName(filePath)}");
 
             using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip("file://" + filePath, AudioType.WAV))
             {
